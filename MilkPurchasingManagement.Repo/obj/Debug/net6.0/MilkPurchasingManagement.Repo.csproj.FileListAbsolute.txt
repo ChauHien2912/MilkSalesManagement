@@ -1,0 +1,14 @@
+D:\FPT\Sum2024\PRM392\GroupProject\MilkPurchasingManagement\MilkPurchasingManagement.Repo\bin\Debug\net6.0\MilkPurchasingManagement.Repo.deps.json
+D:\FPT\Sum2024\PRM392\GroupProject\MilkPurchasingManagement\MilkPurchasingManagement.Repo\bin\Debug\net6.0\MilkPurchasingManagement.Repo.runtimeconfig.json
+D:\FPT\Sum2024\PRM392\GroupProject\MilkPurchasingManagement\MilkPurchasingManagement.Repo\bin\Debug\net6.0\MilkPurchasingManagement.Repo.dll
+D:\FPT\Sum2024\PRM392\GroupProject\MilkPurchasingManagement\MilkPurchasingManagement.Repo\bin\Debug\net6.0\MilkPurchasingManagement.Repo.pdb
+D:\FPT\Sum2024\PRM392\GroupProject\MilkPurchasingManagement\MilkPurchasingManagement.Repo\obj\Debug\net6.0\MilkPurchasingManagement.Repo.csproj.AssemblyReference.cache
+D:\FPT\Sum2024\PRM392\GroupProject\MilkPurchasingManagement\MilkPurchasingManagement.Repo\obj\Debug\net6.0\MilkPurchasingManagement.Repo.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT\Sum2024\PRM392\GroupProject\MilkPurchasingManagement\MilkPurchasingManagement.Repo\obj\Debug\net6.0\MilkPurchasingManagement.Repo.AssemblyInfoInputs.cache
+D:\FPT\Sum2024\PRM392\GroupProject\MilkPurchasingManagement\MilkPurchasingManagement.Repo\obj\Debug\net6.0\MilkPurchasingManagement.Repo.AssemblyInfo.cs
+D:\FPT\Sum2024\PRM392\GroupProject\MilkPurchasingManagement\MilkPurchasingManagement.Repo\obj\Debug\net6.0\MilkPurchasingManagement.Repo.csproj.CoreCompileInputs.cache
+D:\FPT\Sum2024\PRM392\GroupProject\MilkPurchasingManagement\MilkPurchasingManagement.Repo\obj\Debug\net6.0\MilkPurchasingManagement.Repo.dll
+D:\FPT\Sum2024\PRM392\GroupProject\MilkPurchasingManagement\MilkPurchasingManagement.Repo\obj\Debug\net6.0\refint\MilkPurchasingManagement.Repo.dll
+D:\FPT\Sum2024\PRM392\GroupProject\MilkPurchasingManagement\MilkPurchasingManagement.Repo\obj\Debug\net6.0\MilkPurchasingManagement.Repo.pdb
+D:\FPT\Sum2024\PRM392\GroupProject\MilkPurchasingManagement\MilkPurchasingManagement.Repo\obj\Debug\net6.0\MilkPurchasingManagement.Repo.genruntimeconfig.cache
+D:\FPT\Sum2024\PRM392\GroupProject\MilkPurchasingManagement\MilkPurchasingManagement.Repo\obj\Debug\net6.0\ref\MilkPurchasingManagement.Repo.dll

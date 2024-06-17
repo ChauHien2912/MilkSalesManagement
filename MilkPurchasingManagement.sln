@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilkPurchasingManagement", "MilkPurchasingManagement\MilkPurchasingManagement.csproj", "{087BF667-E6F6-47FC-AF6B-801C4CFE6EAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilkPurchasingManagement.Repo", "MilkPurchasingManagement.Repo\MilkPurchasingManagement.Repo.csproj", "{740AC7B4-8DC4-4980-B234-0D15432D5329}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{087BF667-E6F6-47FC-AF6B-801C4CFE6EAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{087BF667-E6F6-47FC-AF6B-801C4CFE6EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{087BF667-E6F6-47FC-AF6B-801C4CFE6EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{087BF667-E6F6-47FC-AF6B-801C4CFE6EAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{740AC7B4-8DC4-4980-B234-0D15432D5329}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{740AC7B4-8DC4-4980-B234-0D15432D5329}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{740AC7B4-8DC4-4980-B234-0D15432D5329}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{740AC7B4-8DC4-4980-B234-0D15432D5329}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {903394A8-2B73-4664-A953-C34F4D07F3D3}
+	EndGlobalSection
+EndGlobal
