@@ -1,4 +1,7 @@
 ﻿using MilkPurchasingManagement.Repo.Repositories;
+using MilkPurchasingManagement.Repo.Service.OrderService;
+using MilkPurchasingManagement.Repo.Service.ProductService;
+using MilkPurchasingManagement.Repo.Service.UserService;
 using System.Runtime.CompilerServices;
 
 
@@ -14,7 +17,9 @@ namespace WareHouseManagement.API.Configuration
 
         public static IServiceCollection AddDIServices(this IServiceCollection services)
         {
-            
+            services.AddScoped<ProductService>();
+            services.AddScoped<OrderService>();
+            services.AddScoped<UserService>();
             return services;    
         }
 
