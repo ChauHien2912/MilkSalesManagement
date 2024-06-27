@@ -12,3 +12,4 @@ D:\FPT\Sum2024\PRM392\GroupProject\MilkPurchasingManagement\MilkPurchasingManage
 D:\FPT\Sum2024\PRM392\GroupProject\MilkPurchasingManagement\MilkPurchasingManagement.Repo\obj\Debug\net6.0\MilkPurchasingManagement.Repo.pdb
 D:\FPT\Sum2024\PRM392\GroupProject\MilkPurchasingManagement\MilkPurchasingManagement.Repo\obj\Debug\net6.0\MilkPurchasingManagement.Repo.genruntimeconfig.cache
 D:\FPT\Sum2024\PRM392\GroupProject\MilkPurchasingManagement\MilkPurchasingManagement.Repo\obj\Debug\net6.0\ref\MilkPurchasingManagement.Repo.dll
+D:\FPT\Sum2024\PRM392\GroupProject\MilkPurchasingManagement\MilkPurchasingManagement.Repo\obj\Debug\net6.0\MilkPurchasingManagement.Repo.sourcelink.json
