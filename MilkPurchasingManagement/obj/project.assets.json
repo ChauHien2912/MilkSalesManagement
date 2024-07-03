@@ -18,6 +18,19 @@
           }
         }
       },
+      "BCrypt.Net-Next/4.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
@@ -846,6 +859,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "AutoMapper": "13.0.1",
+          "BCrypt.Net-Next": "4.0.3",
           "Microsoft.EntityFrameworkCore": "6.0.22",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.22"
         },
@@ -872,6 +886,37 @@
         "icon.png",
         "lib/net6.0/AutoMapper.dll",
         "lib/net6.0/AutoMapper.xml"
+      ]
+    },
+    "BCrypt.Net-Next/4.0.3": {
+      "sha512": "W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
+      "type": "package",
+      "path": "bcrypt.net-next/4.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bcrypt.net-next.4.0.3.nupkg.sha512",
+        "bcrypt.net-next.nuspec",
+        "ico.png",
+        "lib/net20/BCrypt.Net-Next.dll",
+        "lib/net20/BCrypt.Net-Next.xml",
+        "lib/net35/BCrypt.Net-Next.dll",
+        "lib/net35/BCrypt.Net-Next.xml",
+        "lib/net462/BCrypt.Net-Next.dll",
+        "lib/net462/BCrypt.Net-Next.xml",
+        "lib/net472/BCrypt.Net-Next.dll",
+        "lib/net472/BCrypt.Net-Next.xml",
+        "lib/net48/BCrypt.Net-Next.dll",
+        "lib/net48/BCrypt.Net-Next.xml",
+        "lib/net5.0/BCrypt.Net-Next.dll",
+        "lib/net5.0/BCrypt.Net-Next.xml",
+        "lib/net6.0/BCrypt.Net-Next.dll",
+        "lib/net6.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.0/BCrypt.Net-Next.dll",
+        "lib/netstandard2.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.1/BCrypt.Net-Next.dll",
+        "lib/netstandard2.1/BCrypt.Net-Next.xml",
+        "readme.md"
       ]
     },
     "Microsoft.CSharp/4.5.0": {
@@ -2387,23 +2432,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {},
+    "C:\\Users\\voqua\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkPurchasingManagement\\MilkPurchasingManagement\\MilkPurchasingManagement.csproj",
+      "projectUniqueName": "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement\\MilkPurchasingManagement.csproj",
       "projectName": "MilkPurchasingManagement",
-      "projectPath": "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkPurchasingManagement\\MilkPurchasingManagement\\MilkPurchasingManagement.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkPurchasingManagement\\MilkPurchasingManagement\\obj\\",
+      "projectPath": "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement\\MilkPurchasingManagement.csproj",
+      "packagesPath": "C:\\Users\\voqua\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\voqua\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2419,8 +2464,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkPurchasingManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj": {
-              "projectPath": "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkPurchasingManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj"
+            "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj": {
+              "projectPath": "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj"
             }
           }
         }
