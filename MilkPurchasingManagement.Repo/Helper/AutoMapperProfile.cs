@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using MilkPurchasingManagement.Repo.Dtos.Request.Cart;
 using MilkPurchasingManagement.Repo.Dtos.Request.Product;
+using MilkPurchasingManagement.Repo.Dtos.Response.Cart;
 using MilkPurchasingManagement.Repo.Dtos.Response.Product;
 using MilkPurchasingManagement.Repo.Dtos.Response.User;
 using MilkPurchasingManagement.Repo.Models;
@@ -25,6 +27,12 @@ namespace MilkPurchasingManagement.Repo.Helper
 
             //user
             CreateMap<User, GetUserResponse>().ReverseMap();
+
+
+            // Cart
+            CreateMap<UpdateCartRequest, Cart>().ReverseMap();
+            CreateMap<Cart, GetCartResponse>().ReverseMap();
+
 
 
         }
