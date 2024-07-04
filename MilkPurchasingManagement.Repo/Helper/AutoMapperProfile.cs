@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MilkPurchasingManagement.Repo.Dtos.Request.Product;
+using MilkPurchasingManagement.Repo.Dtos.Response.Order;
 using MilkPurchasingManagement.Repo.Dtos.Response.Product;
 using MilkPurchasingManagement.Repo.Dtos.Response.User;
 using MilkPurchasingManagement.Repo.Models;
@@ -21,6 +22,14 @@ namespace MilkPurchasingManagement.Repo.Helper
             CreateMap<Product, GetProductResponse>().ReverseMap();
             CreateMap<CreateProductRequest, Product>().ReverseMap();
             CreateMap<UpdateProductRequest, Product>().ReverseMap();
+            CreateMap<Order, OrderResponseModel>()
+    .ForMember(dest => dest.OrderDetails, opt => opt.MapFrom(src => src.OrderDetails));
+
+            // CreateMap for OrderDetail to OrderDetailModel
+            CreateMap<OrderDetail, OrderResponseModel.OrderDetailModel>()
+                .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src => src.Product.Name)) // Assuming you have a Product navigation property in OrderDetail
+                .ForMember(dest => dest.Quantity, opt => opt.MapFrom(src => src.Quantity.ToString()))
+                .ForMember(dest => dest.Price, opt => opt.MapFrom(src => src.Price.ToString()));
 
 
             //user

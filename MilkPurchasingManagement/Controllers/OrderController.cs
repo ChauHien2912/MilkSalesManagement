@@ -25,12 +25,14 @@ namespace MilkPurchasingManagement.Controllers
         {
             try
             {
-                var result = await _service.CreateOrder(request);
-                if (result == null)
+                var orderDetails = request.OrderDetails; // Get order details from request
+
+                var response = _service.CreateOrder(request, orderDetails);
+                if (response == null)
                 {
                     return BadRequest();
                 }
-                return Ok(result);
+                return Ok(response);
             }
             catch (Exception ex)
             {

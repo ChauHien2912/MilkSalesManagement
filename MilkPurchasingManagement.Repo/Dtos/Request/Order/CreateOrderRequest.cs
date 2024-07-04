@@ -9,10 +9,11 @@ namespace MilkPurchasingManagement.Repo.Dtos.Request.Order
     public class CreateOrderRequest
     {
         public int? UserId { get; set; }
-        public DateTime? CreatedDate { get; set; }
-        public decimal? TotalAmount { get; set; }
+      
+        
         public int? PaymentId { get; set; }
         public string? DeliveryAdress { get; set; }
         public string? Status { get; set; }
+        public List<OrderDetailCreateRequestModel> OrderDetails { get; set; }
     }
 }
