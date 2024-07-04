@@ -125,11 +125,40 @@ namespace MilkPurchasingManagement.Repo.Service.OrderService
             }
         }
 
+        public async Task<ApiResponse> GetAllOrdersAsync()
+        {
+            try
+            {
+                var orders = await _uow.GetRepository<Order>().GetListAsync(include: p => p.Include(m => m.User).Include(m => m.OrderDetails).ThenInclude(od => od.Product));
+                var orderResponseModels = _mapper.Map<List<OrderResponseModel>>(orders);
+
+                return new ApiResponse
+                {
+                    Success = true,
+                    Message = "Orders retrieved successfully",
+                    Data = orderResponseModels
+                };
+            }
+            catch (Exception ex)
+            {
+                // Log the detailed error
+                return new ApiResponse
+                {
+                    Success = false,
+                    Message = $"An error occurred while retrieving the orders: {ex.Message}"
+                };
+            }
+        }
+
     }
 }
 
 
 
-    
 
-    
+
+
+
+
+
+

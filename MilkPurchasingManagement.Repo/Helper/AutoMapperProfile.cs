@@ -22,12 +22,13 @@ namespace MilkPurchasingManagement.Repo.Helper
             CreateMap<Product, GetProductResponse>().ReverseMap();
             CreateMap<CreateProductRequest, Product>().ReverseMap();
             CreateMap<UpdateProductRequest, Product>().ReverseMap();
+            // Order mappings
             CreateMap<Order, OrderResponseModel>()
-    .ForMember(dest => dest.OrderDetails, opt => opt.MapFrom(src => src.OrderDetails));
+                .ForMember(dest => dest.OrderDetails, opt => opt.MapFrom(src => src.OrderDetails));
 
-            // CreateMap for OrderDetail to OrderDetailModel
+            // OrderDetail to OrderDetailModel mapping
             CreateMap<OrderDetail, OrderResponseModel.OrderDetailModel>()
-                .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src => src.Product.Name)) // Assuming you have a Product navigation property in OrderDetail
+                .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src => src.Product.Name))
                 .ForMember(dest => dest.Quantity, opt => opt.MapFrom(src => src.Quantity.ToString()))
                 .ForMember(dest => dest.Price, opt => opt.MapFrom(src => src.Price.ToString()));
 

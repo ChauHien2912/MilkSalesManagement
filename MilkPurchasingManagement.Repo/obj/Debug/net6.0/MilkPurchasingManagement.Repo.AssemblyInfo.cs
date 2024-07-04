@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MilkPurchasingManagement.Repo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3821f6ed9c2b3698e113fb95fc076112fc9b3231")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+385ed439f0fddac4ff8a1273b0388df2defeec62")]
 [assembly: System.Reflection.AssemblyProductAttribute("MilkPurchasingManagement.Repo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MilkPurchasingManagement.Repo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -12,7 +12,7 @@ namespace MilkPurchasingManagement.Repo.Dtos.Response.Order
         public int Id { get; set; }
         public int? UserId { get; set; }
         public DateTime? CreatedDate { get; set; }
-        public decimal? TotalAmount { get; set; }
+        public decimal? TotalAmount {  get; set; }
         public int? PaymentId { get; set; }
         public string? DeliveryAdress { get; set; }
         public string? Status { get; set; }

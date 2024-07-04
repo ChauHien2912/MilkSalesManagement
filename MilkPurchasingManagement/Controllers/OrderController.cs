@@ -39,5 +39,23 @@ namespace MilkPurchasingManagement.Controllers
                 throw new Exception(ex.Message);
             }
         }
+        [HttpGet]
+        public async Task<IActionResult> GetAllOrders()
+        {
+            try
+            {
+                var response = await _service.GetAllOrdersAsync();
+                if (response == null)
+                {
+                    return BadRequest();
+                }
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                // You might want to log the exception here
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }
