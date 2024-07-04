@@ -26,5 +26,10 @@
 
         }
 
+        public static class Cart
+        {
+            public const string CartEndpoint = ApiEndpoint + "/carts";
+
+        }
     }
 }

@@ -19,6 +19,20 @@ namespace MilkPurchasingManagement.Controllers
             _service = service;
         }
 
+
+        [HttpGet]
+        [Route("{id}")]
+        public async Task<IActionResult> GetProductById([FromRoute]int id)
+        {
+            var result = await _service.GetProductById(id);
+            if (result == null)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+
         [HttpGet]
         public async Task<IActionResult> GetProducts(int page, int size)
         {

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "FI2cc34DWk/lN1beDvux1wZjT3JVOqHSCANrNf9e04Xc7cmJVVfg0D1qkVIdD5HLbXOQi4QsbsodvxjLqLiC5A==",
+  "dgSpecHash": "0zhqt8z6CCzUUgmxAKI/3Zz7UxkFrBghiDhOtX74oyfG4fz+8lJl2fo5/BPBVX346THi96wd0SHFomeYhvJ/uQ==",
   "success": true,
   "projectFilePath": "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkPurchasingManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

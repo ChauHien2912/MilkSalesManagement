@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "+x1+eyG+fHA17ESye9CisGbge2vNHb6nYrIw/6CzM/1z8FvoLad16ySu60fB2Z/5Y6ezwO+lLCFA6k1i/tTQ2Q==",
+  "dgSpecHash": "YYByTgSZt7e5ym8FjS6mInoZh60tpeA/YHyaKM+94LY15x8QGZrkVqiuPvAXHLmKGOt6x/ECamDa1h3f2jqS3w==",
   "success": true,
   "projectFilePath": "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkPurchasingManagement\\MilkPurchasingManagement\\MilkPurchasingManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
