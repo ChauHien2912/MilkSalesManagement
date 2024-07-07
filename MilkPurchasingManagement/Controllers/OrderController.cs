@@ -76,5 +76,19 @@ namespace MilkPurchasingManagement.Controllers
             return BadRequest(response);
         }
     }
+        [HttpGet("{orderId}")]
+        public async Task<IActionResult> GetOrderById(int orderId)
+        {
+            var response = await _service.GetOrderByIdAsync(orderId);
+
+            if (response.Success)
+            {
+                return Ok(response);
+            }
+            else
+            {
+                return NotFound(response);
+            }
+        }
     }
 }

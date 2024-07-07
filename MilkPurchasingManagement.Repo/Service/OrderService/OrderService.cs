@@ -37,7 +37,7 @@ namespace MilkPurchasingManagement.Repo.Service.OrderService
                         CreatedDate = DateTime.UtcNow,
                         PaymentId = request.PaymentId,
                         DeliveryAdress = request.DeliveryAdress,
-                        Status = "Pending"
+                        Status = "Chưa giao"
                     };
 
                     // Insert order and commit to generate OrderId
@@ -209,7 +209,42 @@ namespace MilkPurchasingManagement.Repo.Service.OrderService
                 }
             }
         }
+        public async Task<ApiResponse> GetOrderByIdAsync(int orderId)
+        {
+            try
+            {
+                var order = await _uow.GetRepository<Order>().SingleOrDefaultAsync(
+                    predicate: o => o.Id == orderId,
+                    include: o => o.Include(o => o.User).Include(o => o.OrderDetails).ThenInclude(od => od.Product));
 
+                if (order == null)
+                {
+                    return new ApiResponse
+                    {
+                        Success = false,
+                        Message = "Order not found"
+                    };
+                }
+
+                var orderResponseModel = _mapper.Map<OrderResponseModel>(order);
+
+                return new ApiResponse
+                {
+                    Success = true,
+                    Message = "Order retrieved successfully",
+                    Data = orderResponseModel
+                };
+            }
+            catch (Exception ex)
+            {
+                // Log the detailed error
+                return new ApiResponse
+                {
+                    Success = false,
+                    Message = $"An error occurred while retrieving the order: {ex.Message}"
+                };
+            }
+        }
     }
 }
 
