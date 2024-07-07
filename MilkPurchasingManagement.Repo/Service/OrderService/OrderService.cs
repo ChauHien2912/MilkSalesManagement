@@ -148,10 +148,75 @@ namespace MilkPurchasingManagement.Repo.Service.OrderService
                     Message = $"An error occurred while retrieving the orders: {ex.Message}"
                 };
             }
+
+        }
+        public async Task<ApiResponse> AutoChangeOrderStatusAsync(OrderStatusUpdateRequestModel orderStatusUpdateDto)
+        {
+            using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                try
+                {
+                    var order = await _uow.GetRepository<Order>().SingleOrDefaultAsync(predicate: e => e.Id == orderStatusUpdateDto.OrderId);
+                    if (order == null)
+                    {
+                        return new ApiResponse
+                        {
+                            Success = false,
+                            Message = "Order not found",
+                        };
+                    }
+
+                    // Change status based on current status
+                    if (order.Status == "Chưa giao")
+                    {
+                        order.Status = "Đang giao";
+                    }
+                    else
+                    {
+                        order.Status = orderStatusUpdateDto.NewStatus;
+                    }
+
+                     _uow.GetRepository<Order>().UpdateAsync(order);
+                    await _uow.CommitAsync();
+
+                    // Complete the transaction scope
+                    scope.Complete();
+
+                    return new ApiResponse
+                    {
+                        Success = true,
+                        Message = order.Status == "Đang giao" ? "Order status automatically updated to 'Đang giao'" : $"Order status automatically updated to '{orderStatusUpdateDto.NewStatus}'",
+                    };
+                }
+                catch (DbUpdateException ex)
+                {
+                    // Log the detailed error
+                    var innerExceptionMessage = ex.InnerException?.Message;
+                    return new ApiResponse
+                    {
+                        Success = false,
+                        Message = $"An error occurred while automatically updating the order status: {innerExceptionMessage}"
+                    };
+                }
+                catch (Exception ex)
+                {
+                    // Handle other possible exceptions
+                    return new ApiResponse
+                    {
+                        Success = false,
+                        Message = $"An unexpected error occurred: {ex.Message}"
+                    };
+                }
+            }
         }
 
     }
 }
+
+    
+
+
+
 
 
 

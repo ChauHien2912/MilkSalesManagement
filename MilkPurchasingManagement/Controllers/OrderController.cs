@@ -57,5 +57,24 @@ namespace MilkPurchasingManagement.Controllers
                 throw new Exception(ex.Message);
             }
         }
+         [HttpPost("update-status")]
+    public async Task<IActionResult> UpdateOrderStatus([FromBody] OrderStatusUpdateRequestModel orderStatusUpdateDto)
+    {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
+        var response = await _service.AutoChangeOrderStatusAsync(orderStatusUpdateDto);
+        
+        if (response.Success)
+        {
+            return Ok(response);
+        }
+        else
+        {
+            return BadRequest(response);
+        }
+    }
     }
 }

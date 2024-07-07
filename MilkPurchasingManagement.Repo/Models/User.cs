@@ -9,6 +9,7 @@ namespace MilkPurchasingManagement.Repo.Models
         {
             Carts = new HashSet<Cart>();
             Orders = new HashSet<Order>();
+            Reviews = new HashSet<Review>();
         }
 
         public int Id { get; set; }
@@ -23,5 +24,6 @@ namespace MilkPurchasingManagement.Repo.Models
         public virtual Role? Role { get; set; }
         public virtual ICollection<Cart> Carts { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
     }
 }
