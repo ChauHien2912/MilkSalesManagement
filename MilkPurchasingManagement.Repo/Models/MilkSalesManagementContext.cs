@@ -21,6 +21,7 @@ namespace MilkPurchasingManagement.Repo.Models
         public virtual DbSet<OrderDetail> OrderDetails { get; set; } = null!;
         public virtual DbSet<Payment> Payments { get; set; } = null!;
         public virtual DbSet<Product> Products { get; set; } = null!;
+        public virtual DbSet<Review> Reviews { get; set; } = null!;
         public virtual DbSet<Role> Roles { get; set; } = null!;
         public virtual DbSet<User> Users { get; set; } = null!;
 
@@ -29,7 +30,7 @@ namespace MilkPurchasingManagement.Repo.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=QUANGHUY\\QHUY;User ID=sa;Password=12345;Database=MilkSalesManagement;Trusted_Connection=False;TrustServerCertificate=True;");
+                optionsBuilder.UseSqlServer("Server=LAPTOP-Q339A538\\SQLEXPRESS;User ID=sa;Password=123456;Database=MilkSalesManagement;Trusted_Connection=False;TrustServerCertificate=True;");
             }
         }
 
@@ -54,12 +55,12 @@ namespace MilkPurchasingManagement.Repo.Models
                 entity.HasOne(d => d.Product)
                     .WithMany(p => p.Carts)
                     .HasForeignKey(d => d.ProductId)
-                    .HasConstraintName("FK__Cart__productId__4AB81AF0");
+                    .HasConstraintName("FK__Cart__productId__440B1D61");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Carts)
                     .HasForeignKey(d => d.UserId)
-                    .HasConstraintName("FK__Cart__userId__49C3F6B7");
+                    .HasConstraintName("FK__Cart__userId__44FF419A");
             });
 
             modelBuilder.Entity<Order>(entity =>
@@ -91,12 +92,12 @@ namespace MilkPurchasingManagement.Repo.Models
                 entity.HasOne(d => d.Payment)
                     .WithMany(p => p.Orders)
                     .HasForeignKey(d => d.PaymentId)
-                    .HasConstraintName("FK__Order__paymentId__412EB0B6");
+                    .HasConstraintName("FK__Order__paymentId__45F365D3");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Orders)
                     .HasForeignKey(d => d.UserId)
-                    .HasConstraintName("FK__Order__userId__403A8C7D");
+                    .HasConstraintName("FK__Order__userId__46E78A0C");
             });
 
             modelBuilder.Entity<OrderDetail>(entity =>
@@ -118,12 +119,12 @@ namespace MilkPurchasingManagement.Repo.Models
                 entity.HasOne(d => d.Order)
                     .WithMany(p => p.OrderDetails)
                     .HasForeignKey(d => d.OrderId)
-                    .HasConstraintName("FK__OrderDeta__order__45F365D3");
+                    .HasConstraintName("FK__OrderDeta__order__47DBAE45");
 
                 entity.HasOne(d => d.Product)
                     .WithMany(p => p.OrderDetails)
                     .HasForeignKey(d => d.ProductId)
-                    .HasConstraintName("FK__OrderDeta__produ__46E78A0C");
+                    .HasConstraintName("FK__OrderDeta__produ__48CFD27E");
             });
 
             modelBuilder.Entity<Payment>(entity =>
@@ -140,6 +141,8 @@ namespace MilkPurchasingManagement.Repo.Models
                 entity.ToTable("Product");
 
                 entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.AgeAllowed).HasColumnName("ageAllowed");
 
                 entity.Property(e => e.Brand)
                     .HasMaxLength(255)
@@ -166,6 +169,38 @@ namespace MilkPurchasingManagement.Repo.Models
                     .HasColumnName("price");
 
                 entity.Property(e => e.Quantity).HasColumnName("quantity");
+
+                entity.Property(e => e.Volume)
+                    .HasColumnType("decimal(18, 0)")
+                    .HasColumnName("volume");
+            });
+
+            modelBuilder.Entity<Review>(entity =>
+            {
+                entity.ToTable("Review");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Content)
+                    .HasMaxLength(255)
+                    .HasColumnName("content")
+                    .IsFixedLength();
+
+                entity.Property(e => e.ProductId).HasColumnName("productId");
+
+                entity.Property(e => e.Rate).HasColumnName("rate");
+
+                entity.Property(e => e.UserId).HasColumnName("userId");
+
+                entity.HasOne(d => d.Product)
+                    .WithMany(p => p.Reviews)
+                    .HasForeignKey(d => d.ProductId)
+                    .HasConstraintName("FK_Review_Product");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Reviews)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK_Review_User");
             });
 
             modelBuilder.Entity<Role>(entity =>
@@ -214,7 +249,7 @@ namespace MilkPurchasingManagement.Repo.Models
                 entity.HasOne(d => d.Role)
                     .WithMany(p => p.Users)
                     .HasForeignKey(d => d.Roleid)
-                    .HasConstraintName("FK__User__roleid__3B75D760");
+                    .HasConstraintName("FK__User__roleid__4BAC3F29");
             });
 
             OnModelCreatingPartial(modelBuilder);

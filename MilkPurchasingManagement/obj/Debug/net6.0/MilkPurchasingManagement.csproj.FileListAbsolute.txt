@@ -139,3 +139,4 @@ C:\Users\voqua\Downloads\MilkSalesManagement\MilkPurchasingManagement\obj\Debug\
 C:\Users\voqua\Downloads\MilkSalesManagement\MilkPurchasingManagement\obj\Debug\net6.0\MilkPurchasingManagement.genruntimeconfig.cache
 C:\Users\voqua\Downloads\MilkSalesManagement\MilkPurchasingManagement\obj\Debug\net6.0\ref\MilkPurchasingManagement.dll
 C:\Users\voqua\Downloads\MilkSalesManagement\MilkPurchasingManagement\bin\Debug\net6.0\BCrypt.Net-Next.dll
+D:\FPT\Sum2024\PRM392\GroupProject\MilkPurchasingManagement\MilkPurchasingManagement\bin\Debug\net6.0\BCrypt.Net-Next.dll

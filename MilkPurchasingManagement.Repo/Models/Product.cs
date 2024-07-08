@@ -9,6 +9,7 @@ namespace MilkPurchasingManagement.Repo.Models
         {
             Carts = new HashSet<Cart>();
             OrderDetails = new HashSet<OrderDetail>();
+            Reviews = new HashSet<Review>();
         }
 
         public int Id { get; set; }
@@ -19,8 +20,11 @@ namespace MilkPurchasingManagement.Repo.Models
         public DateTime? ExpirationDate { get; set; }
         public string? Brand { get; set; }
         public string? ImgUrl { get; set; }
+        public decimal? Volume { get; set; }
+        public int? AgeAllowed { get; set; }
 
         public virtual ICollection<Cart> Carts { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
     }
 }
