@@ -76,6 +76,7 @@ C:\Users\voqua\Downloads\MilkSalesManagement\MilkPurchasingManagement\bin\Debug\
 C:\Users\voqua\Downloads\MilkSalesManagement\MilkPurchasingManagement\bin\Debug\net6.0\MilkPurchasingManagement.dll
 C:\Users\voqua\Downloads\MilkSalesManagement\MilkPurchasingManagement\bin\Debug\net6.0\MilkPurchasingManagement.pdb
 C:\Users\voqua\Downloads\MilkSalesManagement\MilkPurchasingManagement\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\voqua\Downloads\MilkSalesManagement\MilkPurchasingManagement\bin\Debug\net6.0\BCrypt.Net-Next.dll
 C:\Users\voqua\Downloads\MilkSalesManagement\MilkPurchasingManagement\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\voqua\Downloads\MilkSalesManagement\MilkPurchasingManagement\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\voqua\Downloads\MilkSalesManagement\MilkPurchasingManagement\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -138,4 +139,3 @@ C:\Users\voqua\Downloads\MilkSalesManagement\MilkPurchasingManagement\obj\Debug\
 C:\Users\voqua\Downloads\MilkSalesManagement\MilkPurchasingManagement\obj\Debug\net6.0\MilkPurchasingManagement.pdb
 C:\Users\voqua\Downloads\MilkSalesManagement\MilkPurchasingManagement\obj\Debug\net6.0\MilkPurchasingManagement.genruntimeconfig.cache
 C:\Users\voqua\Downloads\MilkSalesManagement\MilkPurchasingManagement\obj\Debug\net6.0\ref\MilkPurchasingManagement.dll
-C:\Users\voqua\Downloads\MilkSalesManagement\MilkPurchasingManagement\bin\Debug\net6.0\BCrypt.Net-Next.dll
