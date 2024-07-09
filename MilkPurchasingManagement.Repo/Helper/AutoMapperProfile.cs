@@ -1,11 +1,14 @@
 ﻿using AutoMapper;
-using MilkPurchasingManagement.Repo.Dtos.Request.Cart;
 using MilkPurchasingManagement.Repo.Dtos.Request.Product;
+<<<<<<< HEAD
 using MilkPurchasingManagement.Repo.Dtos.Request.Review;
 using MilkPurchasingManagement.Repo.Dtos.Response.Cart;
 
 using MilkPurchasingManagement.Repo.Dtos.Response.Order;
 
+=======
+using MilkPurchasingManagement.Repo.Dtos.Response.Order;
+>>>>>>> 9687837bcfade4f90830780be544397d7f6840f6
 using MilkPurchasingManagement.Repo.Dtos.Response.Product;
 using MilkPurchasingManagement.Repo.Dtos.Response.Review;
 using MilkPurchasingManagement.Repo.Dtos.Response.User;
@@ -43,6 +46,7 @@ namespace MilkPurchasingManagement.Repo.Helper
             CreateMap<User, GetUserResponse>().ReverseMap();
 
 
+<<<<<<< HEAD
             // Cart
             CreateMap<UpdateCartRequest, Cart>().ReverseMap();
             CreateMap<Cart, GetCartResponse>().ReverseMap();
@@ -51,6 +55,8 @@ namespace MilkPurchasingManagement.Repo.Helper
             CreateMap<Review, GetReviewResponse>().ReverseMap();
             CreateMap<UpdateReview, Review>().ReverseMap();
 
+=======
+>>>>>>> 9687837bcfade4f90830780be544397d7f6840f6
         }
         
 

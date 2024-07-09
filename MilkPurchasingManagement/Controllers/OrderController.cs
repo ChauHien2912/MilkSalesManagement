@@ -36,6 +36,7 @@ namespace MilkPurchasingManagement.Controllers
             }
             catch (Exception ex)
             {
+                // You might want to log the exception here
                 throw new Exception(ex.Message);
             }
         }
@@ -55,6 +56,39 @@ namespace MilkPurchasingManagement.Controllers
             {
                 // You might want to log the exception here
                 throw new Exception(ex.Message);
+            }
+        }
+         [HttpPost("update-status")]
+    public async Task<IActionResult> UpdateOrderStatus([FromBody] OrderStatusUpdateRequestModel orderStatusUpdateDto)
+    {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
+        var response = await _service.AutoChangeOrderStatusAsync(orderStatusUpdateDto);
+        
+        if (response.Success)
+        {
+            return Ok(response);
+        }
+        else
+        {
+            return BadRequest(response);
+        }
+    }
+        [HttpGet("{orderId}")]
+        public async Task<IActionResult> GetOrderById(int orderId)
+        {
+            var response = await _service.GetOrderByIdAsync(orderId);
+
+            if (response.Success)
+            {
+                return Ok(response);
+            }
+            else
+            {
+                return NotFound(response);
             }
         }
     }

@@ -130,7 +130,7 @@ namespace MilkPurchasingManagement.Repo.Service.ReviewService
                 throw new Exception("Not found review");
             }
             var reviewResponses = new Paginate<GetReviewResponse>()
-            {
+    {
                 Page = review.Page,
                 Size = review.Size,
                 Total = review.Total,
