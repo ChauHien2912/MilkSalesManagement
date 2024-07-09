@@ -23,6 +23,16 @@ namespace MilkPurchasingManagement.Repo.Service.ProductService
         }
 
 
+        public async Task<GetProductResponse> GetProductById(int id)
+        {
+            var product = await _uow.GetRepository<Product>().SingleOrDefaultAsync(predicate: p => p.Id == id);
+            if(product == null)
+            {
+                throw new Exception("Product not found!");
+            }
+            return _mapper.Map<GetProductResponse>(product);
+        }
+
         public async Task<IPaginate<GetProductResponse>> GetProducts(int page, int size)
         {
             var products = await _uow.GetRepository<Product>()
