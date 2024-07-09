@@ -31,5 +31,11 @@
             public const string CartEndpoint = ApiEndpoint + "/carts";
 
         }
+
+        public static class Review
+        {
+            public const string ReviewEndpoint = ApiEndpoint + "/reviews";
+
+        }
     }
 }
