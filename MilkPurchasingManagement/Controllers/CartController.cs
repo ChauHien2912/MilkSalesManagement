@@ -21,9 +21,9 @@ namespace MilkPurchasingManagement.Controllers
 
         [HttpGet]
         [Route("{id}")]
-        public async Task<IActionResult> GetCartByUserId([FromRoute]int userid, [FromQuery]int page = 1, [FromQuery]int size = 10)
+        public async Task<IActionResult> GetCartByUserId([FromRoute]int id, [FromQuery]int page = 1, [FromQuery]int size = 10)
         {
-            var result = await _cartService.GetAllCartProduct(userid, page, size);
+            var result = await _cartService.GetAllCartProduct(id, page, size);
             return Ok(result);
         }
 

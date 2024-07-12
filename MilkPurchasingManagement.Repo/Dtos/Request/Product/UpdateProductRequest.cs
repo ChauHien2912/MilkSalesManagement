@@ -15,5 +15,7 @@ namespace MilkPurchasingManagement.Repo.Dtos.Request.Product
         public DateTime? ExpirationDate { get; set; }
         public string? Brand { get; set; }
         public string? ImgUrl { get; set; }
+        public decimal? Volume { get; set; }
+        public int? AgeAllowed { get; set; }
     }
 }

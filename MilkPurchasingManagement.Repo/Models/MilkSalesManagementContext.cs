@@ -30,7 +30,11 @@ namespace MilkPurchasingManagement.Repo.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=QUANGHUY\\QHUY;uid=sa;pwd=12345;database=MilkSalesManagement;TrustServerCertificate=True");
+
+                optionsBuilder.UseSqlServer("Server=LAPTOP-Q339A538\\SQLEXPRESS;User ID=sa;Password=123456;Database=MilkSalesManagement;Trusted_Connection=False;TrustServerCertificate=True;");
+
+                
+
             }
         }
 
@@ -55,12 +59,16 @@ namespace MilkPurchasingManagement.Repo.Models
                 entity.HasOne(d => d.Product)
                     .WithMany(p => p.Carts)
                     .HasForeignKey(d => d.ProductId)
-                    .HasConstraintName("FK__Cart__productId__4316F928");
+
+                    .HasConstraintName("FK__Cart__productId__440B1D61");
+
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Carts)
                     .HasForeignKey(d => d.UserId)
-                    .HasConstraintName("FK__Cart__userId__440B1D61");
+
+                    .HasConstraintName("FK__Cart__userId__44FF419A");
+
             });
 
             modelBuilder.Entity<Order>(entity =>
@@ -92,12 +100,16 @@ namespace MilkPurchasingManagement.Repo.Models
                 entity.HasOne(d => d.Payment)
                     .WithMany(p => p.Orders)
                     .HasForeignKey(d => d.PaymentId)
-                    .HasConstraintName("FK__Order__paymentId__44FF419A");
+
+                    .HasConstraintName("FK__Order__paymentId__45F365D3");
+
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Orders)
                     .HasForeignKey(d => d.UserId)
-                    .HasConstraintName("FK__Order__userId__45F365D3");
+
+                    .HasConstraintName("FK__Order__userId__46E78A0C");
+
             });
 
             modelBuilder.Entity<OrderDetail>(entity =>
@@ -119,12 +131,16 @@ namespace MilkPurchasingManagement.Repo.Models
                 entity.HasOne(d => d.Order)
                     .WithMany(p => p.OrderDetails)
                     .HasForeignKey(d => d.OrderId)
-                    .HasConstraintName("FK__OrderDeta__order__46E78A0C");
+
+                    .HasConstraintName("FK__OrderDeta__order__47DBAE45");
+
 
                 entity.HasOne(d => d.Product)
                     .WithMany(p => p.OrderDetails)
                     .HasForeignKey(d => d.ProductId)
-                    .HasConstraintName("FK__OrderDeta__produ__47DBAE45");
+
+                    .HasConstraintName("FK__OrderDeta__produ__48CFD27E");
+
             });
 
             modelBuilder.Entity<Payment>(entity =>
@@ -249,7 +265,9 @@ namespace MilkPurchasingManagement.Repo.Models
                 entity.HasOne(d => d.Role)
                     .WithMany(p => p.Users)
                     .HasForeignKey(d => d.Roleid)
-                    .HasConstraintName("FK__User__roleid__48CFD27E");
+
+                    .HasConstraintName("FK__User__roleid__4BAC3F29");
+
             });
 
             OnModelCreatingPartial(modelBuilder);

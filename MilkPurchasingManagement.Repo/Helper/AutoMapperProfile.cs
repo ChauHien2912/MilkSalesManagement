@@ -1,7 +1,15 @@
 ﻿using AutoMapper;
+using MilkPurchasingManagement.Repo.Dtos.Request.Cart;
 using MilkPurchasingManagement.Repo.Dtos.Request.Product;
+using MilkPurchasingManagement.Repo.Dtos.Request.Review;
+using MilkPurchasingManagement.Repo.Dtos.Response.Cart;
+
 using MilkPurchasingManagement.Repo.Dtos.Response.Order;
+
+using MilkPurchasingManagement.Repo.Dtos.Response.Order;
+
 using MilkPurchasingManagement.Repo.Dtos.Response.Product;
+using MilkPurchasingManagement.Repo.Dtos.Response.Review;
 using MilkPurchasingManagement.Repo.Dtos.Response.User;
 using MilkPurchasingManagement.Repo.Models;
 using System;
@@ -35,6 +43,16 @@ namespace MilkPurchasingManagement.Repo.Helper
 
             //user
             CreateMap<User, GetUserResponse>().ReverseMap();
+
+
+
+            // Cart
+            CreateMap<UpdateCartRequest, Cart>().ReverseMap();
+            CreateMap<Cart, GetCartResponse>().ReverseMap();
+
+            //Review
+            CreateMap<Review, GetReviewResponse>().ReverseMap();
+            CreateMap<UpdateReview, Review>().ReverseMap();
 
 
         }

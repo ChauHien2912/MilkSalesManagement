@@ -36,6 +36,7 @@ namespace MilkPurchasingManagement.Controllers
             }
             catch (Exception ex)
             {
+                // You might want to log the exception here
                 throw new Exception(ex.Message);
             }
         }

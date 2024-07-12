@@ -55,7 +55,18 @@ namespace MilkPurchasingManagement.Repo.Service.ProductService
 
         public async Task<bool> CreateProduct(CreateProductRequest request)
         {
-            var product =  _mapper.Map<Product>(request);
+            var product = new Product {
+             Name = request.Name,
+             Description = request.Description,
+             Price = request.Price,
+             Quantity = request.Quantity,
+             ExpirationDate = request.ExpirationDate,
+             Brand = request.Brand,
+             ImgUrl = request.ImgUrl,
+             Volume = request.Volume,
+             AgeAllowed = request.AgeAllowed            
+            };
+
             await _uow.GetRepository<Product>().InsertAsync(product);
             bool isCreated = await _uow.CommitAsync() > 0;
             return isCreated;
@@ -71,6 +82,7 @@ namespace MilkPurchasingManagement.Repo.Service.ProductService
             }
 
             productexisting = _mapper.Map<Product>(request);
+            productexisting.Id = id;
             _uow.GetRepository<Product>().UpdateAsync(productexisting);
             bool isUpdate = await _uow.CommitAsync() > 0;
             return isUpdate;

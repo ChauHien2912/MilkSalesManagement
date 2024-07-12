@@ -13,7 +13,6 @@ namespace MilkPurchasingManagement.Repo.Dtos.Request.Order
         
         public int? PaymentId { get; set; }
         public string? DeliveryAdress { get; set; }
-        public string? Status { get; set; }
         public List<OrderDetailCreateRequestModel> OrderDetails { get; set; }
     }
 }

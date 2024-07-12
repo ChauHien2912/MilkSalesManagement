@@ -41,7 +41,7 @@ namespace MilkPurchasingManagement.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateProdcut([FromBody] CreateProductRequest request)
+        public async Task<IActionResult> CreateProdcut([FromBody]CreateProductRequest request)
         {
             try
             {
@@ -78,6 +78,7 @@ namespace MilkPurchasingManagement.Controllers
         }
 
         [HttpDelete]
+        [Route("{id}")]
         public async Task<IActionResult> DeleteProdcut([FromRoute] int id)
         {
             try

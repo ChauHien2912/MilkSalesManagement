@@ -1,6 +1,9 @@
-﻿using MilkPurchasingManagement.Repo.Repositories;
+﻿using MilkPurchasingManagement.Repo.Models;
+using MilkPurchasingManagement.Repo.Repositories;
+using MilkPurchasingManagement.Repo.Service.CartService;
 using MilkPurchasingManagement.Repo.Service.OrderService;
 using MilkPurchasingManagement.Repo.Service.ProductService;
+using MilkPurchasingManagement.Repo.Service.ReviewService;
 using MilkPurchasingManagement.Repo.Service.UserService;
 using System.Runtime.CompilerServices;
 
@@ -20,6 +23,8 @@ namespace WareHouseManagement.API.Configuration
             services.AddScoped<ProductService>();
             services.AddScoped<OrderService>();
             services.AddScoped<UserService>();
+            services.AddScoped<CartService>();
+            services.AddScoped<ReviewService>();
             return services;    
         }
 
