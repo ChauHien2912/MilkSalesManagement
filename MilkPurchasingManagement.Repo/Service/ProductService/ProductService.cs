@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using MilkPurchasingManagement.Repo.Dtos.Request.Product;
 using MilkPurchasingManagement.Repo.Dtos.Response.Product;
 using MilkPurchasingManagement.Repo.Models;
@@ -6,7 +7,9 @@ using MilkPurchasingManagement.Repo.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using WareHouseManagement.Repository.Specifications;
 
@@ -16,6 +19,7 @@ namespace MilkPurchasingManagement.Repo.Service.ProductService
     {
         private readonly IUnitOfWork _uow;
         private readonly IMapper _mapper;
+        private const string FirebaseStorageBaseUrl = "https://firebasestorage.googleapis.com/v0/b/milkmanagement-image.appspot.com/o";
         public ProductService(IUnitOfWork uow, IMapper mapper)
         {
             _uow = uow;
@@ -55,22 +59,80 @@ namespace MilkPurchasingManagement.Repo.Service.ProductService
 
         public async Task<bool> CreateProduct(CreateProductRequest request)
         {
-            var product = new Product {
-             Name = request.Name,
-             Description = request.Description,
-             Price = request.Price,
-             Quantity = request.Quantity,
-             ExpirationDate = request.ExpirationDate,
-             Brand = request.Brand,
-             ImgUrl = request.ImgUrl,
-             Volume = request.Volume,
-             AgeAllowed = request.AgeAllowed            
+            var product = new Product
+            {
+                Name = request.Name,
+                Description = request.Description,
+                Price = request.Price,
+                Quantity = request.Quantity,
+                ExpirationDate = request.ExpirationDate,
+                Brand = request.Brand,
+                Volume = request.Volume,
+                AgeAllowed = request.AgeAllowed
             };
+
+            if (request.ImgUrl != null && request.ImgUrl.Any())
+            {
+                var imageUrls = await UploadFilesToFirebase(request.ImgUrl);
+                foreach (var imageUrl in imageUrls)
+                {
+                    product.Images.Add(new Image { ImageUrl = imageUrl });
+                }
+            }
 
             await _uow.GetRepository<Product>().InsertAsync(product);
             bool isCreated = await _uow.CommitAsync() > 0;
             return isCreated;
+        }
 
+        private async Task<List<string>> UploadFilesToFirebase(List<IFormFile> formFiles)
+        {
+            var uploadedUrls = new List<string>();
+
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    foreach (var formFile in formFiles)
+                    {
+                        if (formFile.Length > 0)
+                        {
+                            string fileName = Path.GetFileName(formFile.FileName);
+                            string firebaseStorageUrl = $"{FirebaseStorageBaseUrl}?uploadType=media&name=images/{Guid.NewGuid()}_{fileName}";
+
+                            using (var stream = new MemoryStream())
+                            {
+                                await formFile.CopyToAsync(stream);
+                                stream.Position = 0;
+                                var content = new ByteArrayContent(stream.ToArray());
+                                content.Headers.ContentType = new MediaTypeHeaderValue(formFile.ContentType);
+
+                                var response = await client.PostAsync(firebaseStorageUrl, content);
+                                if (response.IsSuccessStatusCode)
+                                {
+                                    var responseBody = await response.Content.ReadAsStringAsync();
+                                    var downloadUrl = ParseDownloadUrl(responseBody, fileName);
+                                    uploadedUrls.Add(downloadUrl);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions appropriately
+            }
+
+            return uploadedUrls;
+        }
+
+        private string ParseDownloadUrl(string responseBody, string fileName)
+        {
+            var json = JsonDocument.Parse(responseBody);
+            var nameElement = json.RootElement.GetProperty("name");
+            var downloadUrl = $"{FirebaseStorageBaseUrl}/{Uri.EscapeDataString(nameElement.GetString())}?alt=media";
+            return downloadUrl;
         }
 
         public async Task<bool> UpdateProduct(int id, UpdateProductRequest request)

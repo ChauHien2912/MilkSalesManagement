@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkPurchasingManagement\\MilkPurchasingManagement\\MilkPurchasingManagement.csproj": {}
+    "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement\\MilkPurchasingManagement.csproj": {}
   },
   "projects": {
-    "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkPurchasingManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj": {
+    "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkPurchasingManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj",
+        "projectUniqueName": "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj",
         "projectName": "MilkPurchasingManagement.Repo",
-        "projectPath": "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkPurchasingManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkPurchasingManagement\\MilkPurchasingManagement.Repo\\obj\\",
+        "projectPath": "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj",
+        "packagesPath": "C:\\Users\\voqua\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement.Repo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\voqua\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -52,6 +52,14 @@
             "BCrypt.Net-Next": {
               "target": "Package",
               "version": "[4.0.3, )"
+            },
+            "FirebaseStorage.net": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -94,20 +102,20 @@
         }
       }
     },
-    "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkPurchasingManagement\\MilkPurchasingManagement\\MilkPurchasingManagement.csproj": {
+    "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement\\MilkPurchasingManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkPurchasingManagement\\MilkPurchasingManagement\\MilkPurchasingManagement.csproj",
+        "projectUniqueName": "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement\\MilkPurchasingManagement.csproj",
         "projectName": "MilkPurchasingManagement",
-        "projectPath": "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkPurchasingManagement\\MilkPurchasingManagement\\MilkPurchasingManagement.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkPurchasingManagement\\MilkPurchasingManagement\\obj\\",
+        "projectPath": "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement\\MilkPurchasingManagement.csproj",
+        "packagesPath": "C:\\Users\\voqua\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\voqua\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -123,8 +131,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkPurchasingManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj": {
-                "projectPath": "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkPurchasingManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj"
+              "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj": {
+                "projectPath": "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj"
               }
             }
           }

@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+
 
 namespace MilkPurchasingManagement.Repo.Dtos.Request.Product
 {
@@ -14,7 +17,8 @@ namespace MilkPurchasingManagement.Repo.Dtos.Request.Product
         public int? Quantity { get; set; }
         public DateTime? ExpirationDate { get; set; }
         public string? Brand { get; set; }
-        public string? ImgUrl { get; set; }
+      
+        public List<IFormFile> ImgUrl { get; set; } = new List<IFormFile>();
         public decimal? Volume { get; set; }
         public int? AgeAllowed { get; set; }
     }

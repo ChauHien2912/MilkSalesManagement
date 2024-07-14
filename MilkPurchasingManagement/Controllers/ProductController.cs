@@ -41,7 +41,7 @@ namespace MilkPurchasingManagement.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateProdcut([FromBody]CreateProductRequest request)
+        public async Task<IActionResult> CreateProdcut([FromForm] CreateProductRequest request)
         {
             try
             {
