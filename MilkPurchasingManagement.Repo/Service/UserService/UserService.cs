@@ -139,8 +139,11 @@ namespace MilkPurchasingManagement.Repo.Service.UserService
                 Subject = new ClaimsIdentity(new Claim[]
                 {
             new Claim("unique_name", user.FullName ?? throw new InvalidOperationException("Fullname cannot be null")),
+            new Claim("id", user.Id.ToString() ?? throw new InvalidOperationException("Fullname cannot be null")),
             new Claim(ClaimTypes.Role, user.Roleid.ToString()),
             new Claim(ClaimTypes.Email, user.Email ?? throw new InvalidOperationException("Email cannot be null")),
+            new Claim("phone_number", user.Phone.ToString() ?? throw new InvalidOperationException("Phone cannot be null")),
+            new Claim("address", user.Address) ?? throw new InvalidOperationException("Address cannot be null"),
             new Claim("TokenId", Guid.NewGuid().ToString()),
                 }),
                 Expires = DateTime.UtcNow.AddHours(1),
