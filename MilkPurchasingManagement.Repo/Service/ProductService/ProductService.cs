@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using MilkPurchasingManagement.Repo.Dtos.Request.Product;
 using MilkPurchasingManagement.Repo.Dtos.Response.Product;
 using MilkPurchasingManagement.Repo.Models;
@@ -29,7 +30,7 @@ namespace MilkPurchasingManagement.Repo.Service.ProductService
 
         public async Task<GetProductResponse> GetProductById(int id)
         {
-            var product = await _uow.GetRepository<Product>().SingleOrDefaultAsync(predicate: p => p.Id == id);
+            var product = await _uow.GetRepository<Product>().SingleOrDefaultAsync(predicate: p => p.Id == id, include: i => i.Include(m => m.Images));
             if(product == null)
             {
                 throw new Exception("Product not found!");
@@ -42,7 +43,8 @@ namespace MilkPurchasingManagement.Repo.Service.ProductService
             var products = await _uow.GetRepository<Product>()
             .GetPagingListAsync(               
                 page: page,
-                size: size
+                size: size,
+                include: i => i.Include(po => po.Images)
             );
 
             var voucherResponses = new Paginate<GetProductResponse>()

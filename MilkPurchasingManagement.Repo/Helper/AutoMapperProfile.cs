@@ -27,7 +27,8 @@ namespace MilkPurchasingManagement.Repo.Helper
 
             //Product
             CreateMap<GetProductResponse, Product>().ReverseMap();
-            CreateMap<Product, GetProductResponse>().ReverseMap();
+            CreateMap<Product, GetProductResponse>()
+           .ForMember(dest => dest.ImgUrl, opt => opt.MapFrom(src => src.Images.Select(i => i.ImageUrl).ToList()));
             CreateMap<CreateProductRequest, Product>().ReverseMap();
             CreateMap<UpdateProductRequest, Product>().ReverseMap();
             // Order mappings

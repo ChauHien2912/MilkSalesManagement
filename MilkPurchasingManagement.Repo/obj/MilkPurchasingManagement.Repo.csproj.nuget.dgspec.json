@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj": {}
+    "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkSalesManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj": {
+    "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkSalesManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj",
+        "projectUniqueName": "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkSalesManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj",
         "projectName": "MilkPurchasingManagement.Repo",
-        "projectPath": "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj",
-        "packagesPath": "C:\\Users\\voqua\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\voqua\\Downloads\\MilkSalesManagement\\MilkPurchasingManagement.Repo\\obj\\",
+        "projectPath": "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkSalesManagement\\MilkPurchasingManagement.Repo\\MilkPurchasingManagement.Repo.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\FPT\\Sum2024\\PRM392\\GroupProject\\MilkSalesManagement\\MilkPurchasingManagement.Repo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\voqua\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

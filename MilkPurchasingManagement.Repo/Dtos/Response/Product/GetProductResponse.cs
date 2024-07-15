@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MilkPurchasingManagement.Repo.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,7 @@ namespace MilkPurchasingManagement.Repo.Dtos.Response.Product
         public int? Quantity { get; set; }
         public DateTime? ExpirationDate { get; set; }
         public string? Brand { get; set; }
-        public string? ImgUrl { get; set; }
+        public List<string>? ImgUrl { get; set; }
         public decimal? Volume { get; set; }
         public int? AgeAllowed { get; set; }
     }
